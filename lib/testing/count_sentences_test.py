@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from count_sentences import MyString
-
+import pdb
 import io
 import sys
 
@@ -42,6 +42,8 @@ class TestMyString:
         simple_string = MyString("one. two. three?")
         empty_string = MyString()
         complex_string = MyString("This, well, is a sentence. This is too!! And so is this, I think? Woo...")
+        # pdb.set_trace()
         assert(simple_string.count_sentences() == 3)
+        # pdb.set_trace()
         assert(empty_string.count_sentences() == 0)
         assert(complex_string.count_sentences() == 4)
